@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login | ElectroShop</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="auth-page">
+
+<div class="auth-container">
+  <div class="auth-box">
+
+    <h2 id="authTitle">Login 🔐</h2>
+
+    <!-- LOGIN FORM -->
+    <form id="loginForm">
+      <input type="email" id="loginEmail" placeholder="Email" required>
+
+      <input type="password" id="loginPassword" placeholder="Password" required>
+
+      <label>
+        <input type="checkbox" onclick="togglePassword('loginPassword')">
+        Show Password
+      </label>
+
+      <button type="submit">Login</button>
+    </form>
+
+    <p id="toggleText" onclick="toggleForm()">New user? Create an account first</p>
+
+    <!-- SIGNUP FORM -->
+    <form id="signupForm" style="display:none;">
+      <input type="text" id="signupName" placeholder="Full Name" required>
+
+      <input type="email" id="signupEmail" placeholder="Gmail Address" required>
+
+      <button type="button" id="sendOtpBtn" onclick="sendSignupOTP()">Send OTP</button>
+
+      <button type="button" id="resendOtpBtn" onclick="sendSignupOTP()" style="display:none;">
+        Didn't receive OTP? Resend OTP
+      </button>
+
+      <input type="text" id="signupOTP" placeholder="Enter OTP" style="display:none;">
+
+      <button type="button" id="verifyOtpBtn" onclick="verifySignupOTP()" style="display:none;">
+        Verify OTP
+      </button>
+
+      <div id="passwordBox" style="display:none;">
+        <input type="password" id="signupPassword" placeholder="Create Password">
+
+        <label>
+          <input type="checkbox" onclick="togglePassword('signupPassword')">
+          Show Password
+        </label>
+      </div>
+
+      <button type="submit" id="createAccountBtn" style="display:none;">
+        Create Account
+      </button>
+    </form>
+
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

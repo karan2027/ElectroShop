@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>ElectroShop | Products</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="main-navbar">
+
+  <!-- LEFT -->
+  <div class="nav-left">
+  <div class="profile-menu">
+    <button type="button" class="profile-icon" onclick="handleProfileClick()">👤</button>
+
+    <div id="profileDropdown" class="profile-dropdown">
+      <a href="profile.html">👤 My Profile</a>
+      <a href="orders.html">📦 My Orders</a>
+      <a href="cart.html">🛒 My Cart</a>
+      <button type="button" onclick="logout()">🚪 Logout</button>
+    </div>
+  </div>
+
+  <div class="logo"> ElectroShop</div>
+</div>
+
+  <!-- CENTER -->
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="products.html">Products</a>
+    <a href="shop.html">Shop</a>
+    <a href="compare.html">⚖️ Compare</a>
+    <a href="orders.html" id="orders-link">My Orders 📦</a>
+  </div>
+
+  <div class="global-search">
+  <input
+    type="text"
+    id="globalSearch"
+    placeholder="Search products..."
+    autocomplete="off"
+    oninput="showSearchSuggestions()"
+    onkeydown="searchOnEnter(event)"
+  >
+  <button onclick="handleSearch()">🔍</button>
+  <div id="searchSuggestions" class="search-suggestions"></div>
+</div>
+
+  <!-- RIGHT -->
+<div class="nav-right">
+  <a href="cart.html">🛒 <span id="cart-count">0</span></a>
+</div>
+
+</nav>
+<section class="page-hero pro-page-hero">
+  <h1>Explore All Products</h1>
+  <p>Choose product type and discover best selling electronics</p>
+</section>
+
+<section class="home-section">
+  <div class="section-header">
+    <h2>All Product Types</h2>
+    <a href="shop.html">Shop with Price Filter ❯</a>
+  </div>
+
+  <div id="all-product-types" class="home-grid"></div>
+</section>
+
+<section class="home-section">
+  <div class="section-header">
+    <h2>Best Selling Products</h2>
+    <a href="brand.html">View All Products ❯</a>
+  </div>
+
+  <div id="best-selling-products" class="home-grid"></div>
+</section>
+
+<footer>
+  <p>© 2026 ElectroShop | Premium Tech Store</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

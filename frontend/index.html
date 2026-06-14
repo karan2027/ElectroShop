@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>ElectroShop | Home</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="main-navbar">
+
+  <!-- LEFT -->
+  <div class="nav-left">
+  <div class="profile-menu">
+    <button type="button" class="profile-icon" onclick="handleProfileClick()">👤</button>
+
+    <div id="profileDropdown" class="profile-dropdown">
+      <a href="profile.html">👤 My Profile</a>
+      <a href="orders.html">📦 My Orders</a>
+      <a href="cart.html">🛒 My Cart</a>
+      <button type="button" onclick="logout()">🚪 Logout</button>
+    </div>
+  </div>
+
+  <div class="logo">ElectroShop</div>
+</div>
+
+  <!-- CENTER -->
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="products.html">Products</a>
+    <a href="shop.html">Shop</a>
+    <a href="compare.html">⚖️ Compare</a>
+    <a href="orders.html" id="orders-link">My Orders 📦</a>
+  </div>
+
+  <div class="global-search">
+  <input
+    type="text"
+    id="globalSearch"
+    placeholder="Search products..."
+    autocomplete="off"
+    oninput="showSearchSuggestions()"
+    onkeydown="searchOnEnter(event)"
+  >
+
+  <button onclick="handleSearch()">🔍</button>
+
+  <div id="searchSuggestions" class="search-suggestions"></div>
+</div>
+
+  <!-- RIGHT -->
+  <div class="nav-right">
+  <a href="cart.html">🛒 <span id="cart-count">0</span></a>
+</div>
+
+</nav>
+<section class="new-hero">
+  <div class="hero-left">
+    <h1>Welcome to <span>ElectroShop</span></h1>
+    <p>Premium electronics, latest gadgets and smart accessories.</p>
+    <a href="shop.html" class="hero-btn">Shop Now ❯</a>
+  </div>
+
+  <div class="hero-right">
+    <img src="images/hero.jpg" alt="ElectroShop">
+  </div>
+</section>
+
+<section class="home-section">
+  <div class="section-header">
+    <h2>Shop by Category</h2>
+    <a href="products.html">View All ❯</a>
+  </div>
+
+  <div class="home-grid">
+    <a href="subcategory.html?category=mobile" class="home-card">
+      <img src="images/p-phone.jpg" alt="Mobiles">
+      <h3>Mobiles</h3>
+    </a>
+
+    <a href="subcategory.html?category=laptop" class="home-card">
+      <img src="images/p-laptop.jpg" alt="Laptops">
+      <h3>Laptops</h3>
+    </a>
+
+    <a href="subcategory.html?category=watch" class="home-card">
+      <img src="images/p-watch.jpg" alt="Watches">
+      <h3>Watches</h3>
+    </a>
+
+    <a href="subcategory.html?category=headphone" class="home-card">
+      <img src="images/p-headphones.jpg" alt="Headphones">
+      <h3>Headphones</h3>
+    </a>
+
+    <a href="subcategory.html?category=airbuds" class="home-card">
+      <img src="images/p-airbuds.jpg" alt="Airbuds">
+      <h3>Airbuds</h3>
+    </a>
+
+    <a href="subcategory.html?category=speaker" class="home-card">
+      <img src="images/p-speaker.jpg" alt="Speakers">
+      <h3>Speakers</h3>
+    </a>
+  </div>
+</section>
+
+<section class="features">
+  <div>
+    <span>🛡️</span>
+    <h3>1 Year Warranty</h3>
+    <p>On selected products</p>
+  </div>
+
+  <div>
+    <span>🚚</span>
+    <h3>Fast Delivery</h3>
+    <p>Quick doorstep delivery</p>
+  </div>
+
+  <div>
+    <span>💳</span>
+    <h3>Secure Payment</h3>
+    <p>Safe checkout system</p>
+  </div>
+
+  <div>
+    <span>🎧</span>
+    <h3>24/7 Support</h3>
+    <p>Customer support available</p>
+  </div>
+</section>
+
+<section class="home-section">
+  <div class="section-header">
+    <h2>Popular Products</h2>
+    <a href="products.html">View All Products ❯</a>
+  </div>
+
+  <div id="home-best-products" class="home-grid"></div>
+</section>
+
+<footer>
+  <p>© 2026 ElectroShop | Premium Tech Store</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

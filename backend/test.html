@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>API Test</title>
+</head>
+<body style="font-family: Arial; padding: 20px;">
+
+  <h2>Register Test</h2>
+  <button onclick="registerUser()">Register</button>
+
+  <h2>Login Test</h2>
+  <button onclick="loginUser()">Login</button>
+
+  <h3>Response:</h3>
+  <pre id="output"></pre>
+
+<script>
+
+async function registerUser() {
+  const res = await fetch("http://localhost:5000/api/auth/register", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify({
+      name: "Karan",
+      email: "karan@gmail.com",
+      password: "123456"
+    })
+  });
+
+  const data = await res.json();
+  document.getElementById("output").innerText = JSON.stringify(data, null, 2);
+}
+
+async function loginUser() {
+  const res = await fetch("http://localhost:5000/api/auth/login", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify({
+      email: "karan@gmail.com",
+      password: "123456"
+    })
+  });
+
+  const data = await res.json();
+  document.getElementById("output").innerText = JSON.stringify(data, null, 2);
+}
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>ElectroShop | Products</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="main-navbar">
+  <div class="logo"> ElectroShop</div>
+
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="products.html">Products</a>
+    <a href="shop.html">Shop</a>
+    <a href="compare.html">⚖️ Compare</a>
+    <a href="orders.html" id="orders-link">My Orders 📦</a>
+  </div>
+
+  <div class="global-search">
+  <input
+    type="text"
+    id="globalSearch"
+    placeholder="Search products..."
+    autocomplete="off"
+    oninput="showSearchSuggestions()"
+    onkeydown="searchOnEnter(event)"
+  >
+  <button onclick="handleSearch()">🔍</button>
+  <div id="searchSuggestions" class="search-suggestions"></div>
+</div>
+
+  <div class="nav-right">
+    <a href="cart.html">🛒 <span id="cart-count">0</span></a>
+    <span id="user-name"></span>
+    <a href="login.html" id="login-link">Login</a>
+    <a href="#" id="logout-link" onclick="logout()" style="display:none;">Logout</a>
+  </div>
+</nav>
+
+<section class="page-hero pro-page-hero">
+  <h1 id="brand-title">Products</h1>
+  <p>Choose your favorite product and view full details</p>
+</section>
+
+<section class="section">
+  <div class="filter-box">
+    <input type="text" id="searchInput" placeholder="Search in this list...">
+
+    <select id="priceFilter">
+      <option value="all">All Prices</option>
+      <option value="low">Below ₹20,000</option>
+      <option value="mid">₹20,000 - ₹60,000</option>
+      <option value="high">Above ₹60,000</option>
+    </select>
+  </div>
+
+  <div id="product-container" class="product-grid"></div>
+</section>
+
+<footer>
+  <p>© 2026 ElectroShop | Premium Tech Store</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

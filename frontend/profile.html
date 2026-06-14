@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Profile | ElectroShop</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<!-- SAME NAVBAR HERE -->
+
+<section class="profile-section">
+  <div class="profile-box">
+
+    <h2>My Profile 👤</h2>
+
+    <form id="profileForm">
+
+      <label>Name</label>
+      <input type="text" id="profileName" required>
+
+      <label>Email</label>
+      <input type="email" id="profileEmail" disabled>
+
+      <label>Mobile</label>
+      <input type="text" id="profileMobile">
+
+      <label>Address</label>
+      <textarea id="profileAddress"></textarea>
+
+      <button type="submit">Save</button>
+
+    </form>
+
+    <button class="logout-btn" onclick="logout()">Logout</button>
+
+  </div>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>

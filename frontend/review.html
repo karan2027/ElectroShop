@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Write Review | ElectroShop</title>
+  <link rel="stylesheet" href="review.css">
+</head>
+<body>
+
+  <section class="review-page">
+    <div class="review-card">
+
+      <div class="review-header">
+        <h1>Write Your Review</h1>
+        <p>Share your experience with this product</p>
+      </div>
+
+      <div class="product-box">
+        <span>Product</span>
+        <h2 id="productName">Loading...</h2>
+      </div>
+
+      <div class="rating-box">
+        <p>Select Rating</p>
+        <div class="stars" id="stars">
+          <span data-value="1">★</span>
+          <span data-value="2">★</span>
+          <span data-value="3">★</span>
+          <span data-value="4">★</span>
+          <span data-value="5">★</span>
+        </div>
+      </div>
+
+      <textarea id="comment" placeholder="Write your review here..."></textarea>
+
+      <label class="upload-box">
+        <input type="file" id="reviewImage" accept="image/*">
+        <div>
+          <strong>📷 Upload Product Photo</strong>
+          <p>PNG, JPG, JPEG allowed</p>
+        </div>
+      </label>
+
+      <img id="previewImage" class="preview-image" alt="Preview">
+
+      <div class="review-actions">
+        <button type="button" id="eraseBtn" class="erase-btn">Erase</button>
+        <button type="button" id="autoFillBtn" class="auto-btn">Auto Fill</button>
+      </div>
+
+      <button id="submitReviewBtn" class="submit-btn">Submit Review</button>
+
+      <p id="message"></p>
+
+    </div>
+  </section>
+
+  <script src="review.js"></script>
+</body>
+</html>
