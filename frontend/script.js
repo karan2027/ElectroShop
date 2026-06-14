@@ -2,7 +2,7 @@
    ElectroShop Full script.js
 ========================= */
 
-const API_BASE = "http://localhost:5000";
+const API_BASE = "https://electroshop-backend-pji9.onrender.com";
 
 let otpVerified = false;
 
@@ -482,7 +482,7 @@ async function loadReviews(productId) {
   const reviewsList = document.getElementById("reviewsList");
 
   try {
-    const res = await fetch(`http://localhost:5000/api/reviews/${productId}`);
+    const res = await fetch(`https://electroshop-backend-pji9.onrender.com/api/reviews/${productId}`);
     const reviews = await res.json();
 
     if (reviews.length === 0) {
@@ -502,7 +502,7 @@ async function loadReviews(productId) {
 
           ${
             review.image
-              ? `<img src="http://localhost:5000${review.image}" class="review-photo">`
+              ? `<img src="https://electroshop-backend-pji9.onrender.com${review.image}" class="review-photo">`
               : ""
           }
         </div>
